@@ -1,23 +1,92 @@
 ﻿<!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui" />
-    <title>tmp</title>
+    <title>Tabs example</title>
     <style type="text/css">
-    
-    </style>
-    <script>
-        for (var i = 0,j=0;i<10,j<6; i++,j++) {
-            k = i + j;
+        body {
+            font-family: arial, verdana, sans-serif;
+            background-color: black;
         }
-        alert(k);
+
+        ol.tablinks {
+            margin: 0;
+            padding: 0;
+        }
+
+            ol.tablinks li {
+                display: inline;
+                list-style: none;
+                text-decoration: none;
+                color: black;
+                background-color: red;
+                padding: 6px 6px 0px 6px;
+            }
+
+                ol.tablinks li:hover {
+                    background-color: white;
+                }
+
+                ol.tablinks li:active {
+                    font-weight: bold;
+                }
+
+                ol.tablinks li.active {
+                    background-color: white;
+                }
+
+        div.tab {
+            width: 500px;
+            background-color: white;
+            padding: 6px;
+            display: none;
+        }
+    </style>
+
+    <script src="jquery-2.1.1.min.js"></script>
+    <script type="text/javascript">
+
+        function toggleTab(id) {
+
+            $('.tablinks li').removeClass('active');
+            $('.tablinks li[data-id="' + id + '"]').addClass('active');
+
+            $('.tablinks .tab').hide();
+            $('.tablinks .tab[data-id="' + id + '"]').show();
+        }
+
+        $(function () {
+            $('.tablinks li').click(function () {
+                toggleTab($(this).attr('data-id'));
+            });
+
+        })
+
     </script>
-</head>
-
-<body>
     
+</head>
+<body>
+    <ol class="tablinks">
+        <li data-id="aa">Tab 1</li>
+        <li data-id="bb">Tab 2</li>
+        <li data-id="cc">Tab 3</li>
+    </ol>
+    <div>
+        <div data-id="aa" class="tab" style="display:block;">
+            This is tab 1. This is tab 1. This is tab 1.
+            This is tab 1. This is tab 1. This is tab 1. This is tab 1. This is tab 1.
+            This is tab 1. This is tab 1. This is tab 1. This is tab 1.
+        </div>
+        <div data-id="bb" class="tab">
+            This is tab 2. This is tab 2. This is tab 2.
+            This is tab 2. This is tab 2. This is tab 2. This is tab 2. This is tab 2.
+            This is tab 2. This is tab 2. This is tab 2. This is tab 2.
+        </div>
+        <div data-id="cc" class="tab">
+            This is tab 3. This is tab 3. This is tab 3.
+            This is tab 3. This is tab 3. This is tab 3. This is tab 3. This is tab 3.
+            This is tab 3. This is tab 3. This is tab 3. This is tab 3.
+        </div>
+    </div>
 </body>
-
 </html>
