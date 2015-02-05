@@ -1,92 +1,45 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
-    <title>Tabs example</title>
-    <style type="text/css">
-        body {
-            font-family: arial, verdana, sans-serif;
-            background-color: black;
-        }
-
-        ol.tablinks {
-            margin: 0;
-            padding: 0;
-        }
-
-            ol.tablinks li {
-                display: inline;
-                list-style: none;
-                text-decoration: none;
-                color: black;
-                background-color: red;
-                padding: 6px 6px 0px 6px;
-            }
-
-                ol.tablinks li:hover {
-                    background-color: white;
-                }
-
-                ol.tablinks li:active {
-                    font-weight: bold;
-                }
-
-                ol.tablinks li.active {
-                    background-color: white;
-                }
-
-        div.tab {
-            width: 500px;
-            background-color: white;
-            padding: 6px;
-            display: none;
-        }
+    <title>wrap</title>
+    <style type="text/css">tmp.css</style>
+    <style>
+    div{
+        height:500px;
+    }
+    .box{
+        width:100%;
+        display: table;
+    }
+    .left{
+        display: table-cell;
+        width: 100px;
+        background:red;
+    }
+    .middle{
+        display: table-cell;
+        background: orange;
+    }
+    .middle:active{
+        background: yellow;
+    }
+    .right{
+        display: table-cell;
+        width: 100px;
+        background: green;
+    }
     </style>
-
-    <script src="jquery-2.1.1.min.js"></script>
-    <script type="text/javascript">
-
-        function toggleTab(id) {
-
-            $('.tablinks li').removeClass('active');
-            $('.tablinks li[data-id="' + id + '"]').addClass('active');
-
-            $('.tablinks .tab').hide();
-            $('.tablinks .tab[data-id="' + id + '"]').show();
-        }
-
-        $(function () {
-            $('.tablinks li').click(function () {
-                toggleTab($(this).attr('data-id'));
-            });
-
-        })
-
-    </script>
-    
+    <script type="text/javascript">tmp.js</script>
 </head>
+
 <body>
-    <ol class="tablinks">
-        <li data-id="aa">Tab 1</li>
-        <li data-id="bb">Tab 2</li>
-        <li data-id="cc">Tab 3</li>
-    </ol>
-    <div>
-        <div data-id="aa" class="tab" style="display:block;">
-            This is tab 1. This is tab 1. This is tab 1.
-            This is tab 1. This is tab 1. This is tab 1. This is tab 1. This is tab 1.
-            This is tab 1. This is tab 1. This is tab 1. This is tab 1.
-        </div>
-        <div data-id="bb" class="tab">
-            This is tab 2. This is tab 2. This is tab 2.
-            This is tab 2. This is tab 2. This is tab 2. This is tab 2. This is tab 2.
-            This is tab 2. This is tab 2. This is tab 2. This is tab 2.
-        </div>
-        <div data-id="cc" class="tab">
-            This is tab 3. This is tab 3. This is tab 3.
-            This is tab 3. This is tab 3. This is tab 3. This is tab 3. This is tab 3.
-            This is tab 3. This is tab 3. This is tab 3. This is tab 3.
-        </div>
+    <div class="box">
+        <div class="left">l</div>
+        <div class="middle">m</div>
+        <div class="right">r</div>
     </div>
 </body>
+
 </html>
