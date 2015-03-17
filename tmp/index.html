@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>邮箱登录-昆山新科之星自动化科技有限公司</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .mailbox {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 320px;
+            height: 220px;
+            margin: -110px 0 0 -160px;
+        }
+
+        .bizmail_loginpanel {
+            font-size: 14px;
+            width: 318px;
+            height: auto;
+            border: 1px solid #ccc;
+            background: #fff;
+            border-radius: 5px;
+            font-family: 'Microsoft YaHei';
+        }
+
+        .bizmail_LoginBox {
+            padding: 15px;
+        }
+
+        .bizmail_loginpanel h3 {
+            padding: 0 0 15px 0;
+            margin: 0 0 15px 0;
+            border-bottom: 1px solid #ccc;
+            font-size: 20px;
+            font-weight: normal;
+        }
+
+        .bizmail_loginpanel form {
+            margin: 0;
+            padding: 0;
+        }
+
+        .bizmail_loginpanel input.text {
+            font-size: 14px;
+            width: 90px;
+            height: 24px;
+            margin: 0 5px 0 0;
+            padding-left: 5px;
+            border: 1px solid #c3c3c3;
+            border-color: #7c7c7c #c3c3c3 #c3c3c3 #9a9a9a;
+            border-radius: 3px;
+            font-family: 'Microsoft YaHei';
+        }
+
+        .bizmail_loginpanel .bizmail_column {
+            height: 40px;
+        }
+
+            .bizmail_loginpanel .bizmail_column label {
+                display: block;
+                float: left;
+                width: 42px;
+                height: 28px;
+                line-height: 28px;
+                font-size: 14px;
+            }
+
+            .bizmail_loginpanel .bizmail_column .bizmail_inputArea {
+                float: left;
+                width: 240px;
+            }
+
+            .bizmail_loginpanel .bizmail_column span {
+                font-size: 14px;
+            }
+
+        .bizmail_loginpanel .bizmail_SubmitArea {
+            margin-left: 42px;
+            clear: both;
+        }
+
+            .bizmail_loginpanel .bizmail_SubmitArea input {
+                height: 30px;
+                border-radius: 3px;
+                border: 1px solid #ccc;
+                background: #f8f8f8;
+                font-size: 14px;
+                font-family: 'Microsoft YaHei';
+                letter-spacing: 2px;
+            }
+
+                .bizmail_loginpanel .bizmail_SubmitArea input:hover {
+                    background: #efefef;
+                }
+
+            .bizmail_loginpanel .bizmail_SubmitArea a {
+                font-size: 14px;
+                margin-left: 40px;
+            }
+
+        .bizmail_loginpanel select {
+            width: 110px;
+            height: 20px;
+            margin: 0 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mailbox">
+        <script type="text/javascript" src="http://exmail.qq.com/zh_CN/htmledition/js_biz/outerlogin.js" charset="gb18030"></script>
+        <script type="text/javascript">
+            writeLoginPanel({
+                domainlist: "xinkezhixing.com",
+                mode: "vertical"
+            });
+        </script>
+    </div>
+</body>
+
+</html>
